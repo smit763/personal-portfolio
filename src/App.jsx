@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Header />
-      <div class="container mx-auto max-w-[1320px] px-5 md:px-10 xl:px-5">
+      <div className="container mx-auto max-w-[1320px] px-5 md:px-10 xl:px-5">
         <Hero />
         <Aboute />
         <Services />

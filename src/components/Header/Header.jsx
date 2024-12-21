@@ -3,10 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <>
-      <div className="z-10 fixed top-0 left-0 w-full py-5">
+      <div className="z-10 sm:fixed top-0 left-0 w-full py-5">
         <div className="container mx-auto max-w-[1600px] px-5 md:px-10">
           <div className="flex justify-between relative">
-            <div className="text-3xl font-sansSerif font-medium text-white">
+            <div className="sm:text-3xl text-xl font-sansSerif font-medium text-white">
               Web Developer
             </div>
             <div>
