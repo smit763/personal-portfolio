@@ -3,6 +3,9 @@ import portfolio1 from "../../assets/images/portfolio-1.jpg";
 import portfolio2 from "../../assets/images/portfolio-2.jpg";
 import portfolio3 from "../../assets/images/portfolio-3.jpg";
 import portfolio4 from "../../assets/images/portfolio-4.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation } from "swiper/modules";
 
 const Portfolio = () => {
   return (
@@ -36,262 +39,274 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-            <div class="swiper portfolio-slider overflow-visible mt-6 xl:mt-14">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="group/portfolio-box">
-                    <div class="overflow-hidden relative rounded-2xl">
-                      <a
-                        class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                        href="portfolio-single.html"
-                      >
-                        <img
-                          class="group-hover:scale-105 transition ease-custom duration-500"
-                          src={portfolio1}
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="pt-6">
-                      <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                        <li class="list-none inline-block leading-none pr-[4px]">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="mt-2">
-                        <h2 class="relative font-outfit font-medium text-3xl">
-                          <a
-                            class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                            href="portfolio-single.html"
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={30}
+              breakpoints={{
+                640: { slidesPerView: 1, spaceBetween: 30 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 2, spaceBetween: 50 },
+              }}
+              navigation={{
+                nextEl: ".swiper-portfolio-next",
+                prevEl: ".swiper-portfolio-prev",
+              }}
+              modules={[Navigation]}
+              className="mySwiper portfolio-slider !overflow-visible mt-6 xl:mt-14"
+            >
+              <SwiperSlide>
+                <div class="group/portfolio-box">
+                  <div class="overflow-hidden relative rounded-2xl">
+                    <a
+                      class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
+                      href="portfolio-single.html"
+                    >
+                      <img
+                        class="group-hover:scale-105 transition ease-custom duration-500"
+                        src={portfolio1}
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="pt-6">
+                    <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
+                      <li class="list-none inline-block leading-none pr-[4px]">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
                           >
-                            <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                              <i class="bi bi-arrow-right"></i>
-                            </span>
-                            Fold Twist Abstract
-                          </a>
-                        </h2>
-                      </div>
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="mt-2">
+                      <h2 class="relative font-outfit font-medium text-3xl">
+                        <a
+                          class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
+                          href="portfolio-single.html"
+                        >
+                          <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
+                            <i class="bi bi-arrow-right"></i>
+                          </span>
+                          Fold Twist Abstract
+                        </a>
+                      </h2>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="group/portfolio-box">
-                    <div class="overflow-hidden relative rounded-2xl">
-                      <a
-                        class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                        href="portfolio-single.html"
-                      >
-                        <img
-                          class="group-hover:scale-105 transition ease-custom duration-500"
-                          src={portfolio2}
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="pt-6">
-                      <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                        <li class="list-none inline-block leading-none pr-[4px]">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="mt-2">
-                        <h2 class="relative font-outfit font-medium text-3xl">
-                          <a
-                            class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                            href="portfolio-single.html"
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="group/portfolio-box">
+                  <div class="overflow-hidden relative rounded-2xl">
+                    <a
+                      class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
+                      href="portfolio-single.html"
+                    >
+                      <img
+                        class="group-hover:scale-105 transition ease-custom duration-500"
+                        src={portfolio2}
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="pt-6">
+                    <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
+                      <li class="list-none inline-block leading-none pr-[4px]">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
                           >
-                            <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                              <i class="bi bi-arrow-right"></i>
-                            </span>
-                            Colors of Circle
-                          </a>
-                        </h2>
-                      </div>
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="mt-2">
+                      <h2 class="relative font-outfit font-medium text-3xl">
+                        <a
+                          class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
+                          href="portfolio-single.html"
+                        >
+                          <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
+                            <i class="bi bi-arrow-right"></i>
+                          </span>
+                          Colors of Circle
+                        </a>
+                      </h2>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="group/portfolio-box">
-                    <div class="overflow-hidden relative rounded-2xl">
-                      <a
-                        class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                        href="portfolio-single.html"
-                      >
-                        <img
-                          class="group-hover:scale-105 transition ease-custom duration-500"
-                          src={portfolio3}
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="pt-6">
-                      <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                        <li class="list-none inline-block leading-none pr-[4px]">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="mt-2">
-                        <h2 class="relative font-outfit font-medium text-3xl">
-                          <a
-                            class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                            href="portfolio-single.html"
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="group/portfolio-box">
+                  <div class="overflow-hidden relative rounded-2xl">
+                    <a
+                      class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
+                      href="portfolio-single.html"
+                    >
+                      <img
+                        class="group-hover:scale-105 transition ease-custom duration-500"
+                        src={portfolio3}
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="pt-6">
+                    <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
+                      <li class="list-none inline-block leading-none pr-[4px]">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
                           >
-                            <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                              <i class="bi bi-arrow-right"></i>
-                            </span>
-                            Fold Twist Abstract
-                          </a>
-                        </h2>
-                      </div>
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="mt-2">
+                      <h2 class="relative font-outfit font-medium text-3xl">
+                        <a
+                          class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
+                          href="portfolio-single.html"
+                        >
+                          <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
+                            <i class="bi bi-arrow-right"></i>
+                          </span>
+                          Fold Twist Abstract
+                        </a>
+                      </h2>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="group/portfolio-box">
-                    <div class="overflow-hidden relative rounded-2xl">
-                      <a
-                        class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                        href="portfolio-single.html"
-                      >
-                        <img
-                          class="group-hover:scale-105 transition ease-custom duration-500"
-                          src={portfolio4}
-                          alt=""
-                        />
-                      </a>
-                    </div>
-                    <div class="pt-6">
-                      <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                        <li class="list-none inline-block leading-none pr-[4px]">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                        <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                          <a class="inline-block overflow-hidden" href="#">
-                            <span
-                              class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                              data-text="Category"
-                            >
-                              Category
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                      <div class="mt-2">
-                        <h2 class="relative font-outfit font-medium text-3xl">
-                          <a
-                            class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                            href="portfolio-single.html"
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="group/portfolio-box">
+                  <div class="overflow-hidden relative rounded-2xl">
+                    <a
+                      class="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
+                      href="portfolio-single.html"
+                    >
+                      <img
+                        class="group-hover:scale-105 transition ease-custom duration-500"
+                        src={portfolio4}
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="pt-6">
+                    <ul class="text-white font-outfit font-medium uppercase text-sm tracking-wider">
+                      <li class="list-none inline-block leading-none pr-[4px]">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
                           >
-                            <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                              <i class="bi bi-arrow-right"></i>
-                            </span>
-                            Visual Art of Cubes
-                          </a>
-                        </h2>
-                      </div>
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                      <li class="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+                        <a class="inline-block overflow-hidden" href="#">
+                          <span
+                            class="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
+                            data-text="Category"
+                          >
+                            Category
+                          </span>
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="mt-2">
+                      <h2 class="relative font-outfit font-medium text-3xl">
+                        <a
+                          class="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
+                          href="portfolio-single.html"
+                        >
+                          <span class="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
+                            <i class="bi bi-arrow-right"></i>
+                          </span>
+                          Visual Art of Cubes
+                        </a>
+                      </h2>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

@@ -8,6 +8,9 @@ import Clients from "./components/Clients/Clients";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Testimonial from "./components/Testimonial/Testimonial";
+import "swiper/css";
+import "swiper/css/pagination";
 
 function App() {
   return (
@@ -18,10 +21,11 @@ function App() {
         <Aboute />
         <Services />
         <Clients />
-        <Portfolio />
-        <Contact />
-        <Footer />
       </div>
+      <Portfolio />
+      <Testimonial />
+      <Contact />
+      <Footer />
     </>
   );
 }
