@@ -11,10 +11,12 @@ import Footer from "./components/Footer/Footer";
 import Testimonial from "./components/Testimonial/Testimonial";
 import "swiper/css";
 import "swiper/css/pagination";
+import AnimatedCursor from "./AnimatedCursor/AnimatedCursor";
 
 function App() {
   return (
     <>
+      <AnimatedCursor />
       <Header />
       <div className="container mx-auto max-w-[1320px] px-5 md:px-10 xl:px-5">
         <Hero />
