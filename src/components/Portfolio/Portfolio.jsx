@@ -5,6 +5,7 @@ import portfolio4 from "../../assets/images/portfolio-4.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
+import { AllProjects } from "../../Utils/Projects/Projects";
 
 const Portfolio = () => {
   return (
@@ -53,323 +54,70 @@ const Portfolio = () => {
               modules={[Navigation]}
               className="mySwiper portfolio-slider !overflow-visible mt-6 xl:mt-14"
             >
-              <SwiperSlide>
-                <div className="group/portfolio-box border border-gray-600 bg-[#0000004b] bg-blend-soft-light backdrop-blur-[40px] py-2 px-3 rounded-xl">
-                  <div className="overflow-hidden relative rounded-md">
-                    <div className="absolute w-full h-full top-0 z-10  bg-black/50 bg-blend-soft-light backdrop-blur-[10px]">
-                      <div className="p-2">
-                        <p className="text-white text-sm font-normal tracking-wider">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ipsa consequuntur odio commodi molestias
-                          explicabo nemo nobis facere? Vero repellendus ad saepe
-                          vitae placeat quam, aliquid neque possimus, voluptas
-                          delectus qui, dolores architecto laudantium soluta
-                          hic? Nihil cupiditate voluptate repellat laudantium
-                          reiciendis sit voluptatem dolor fugiat alias aliquam?
-                          Quam, hic velit.
-                        </p>
-                      </div>
-                    </div>
-                    <a
-                      className="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100  "
-                      href="portfolio-single.html"
-                    >
-                      <img
-                        className="group-hover:scale-105 transition ease-custom duration-500"
-                        src={portfolio1}
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div className="pt-2">
-                    <div className="pb-1">
-                      <h3 className="text-white/80 text-lg font-bold leading-6 tracking-wider">
-                        Invoice Time
-                      </h3>
-                    </div>
-                    <div className="flex justify-between">
-                      <div>
-                        {/* <div className="text-white/80 font-medium text-sm">
-                          language
-                        </div> */}
-                        <div className="mt-1">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <div className="flex items-center px-2 gap-2 border border-[#f1e05a] rounded-md">
-                              <span className="text-[#f1e05a] text-sm">
-                                Javascript
-                              </span>
-                            </div>
-
-                            <div className="flex items-center px-2 gap-2 border border-[#61dafb] rounded-md">
-                              <span className="text-[#61dafb] text-sm">
-                                React
-                              </span>
-                            </div>
-
-                            <div className="flex items-center px-2 gap-2 border border-[#ff2d20] rounded-md">
-                              <span className="text-[#ff2d20] text-sm">
-                                Laravel
-                              </span>
-                            </div>
-                          </div>
+              
+              {AllProjects.map((res, i) => (
+                <SwiperSlide key={res.id}>
+                  <div className="group/portfolio-box group">
+                    <div className="overflow-hidden relative rounded-2xl ">
+                      <div className="absolute w-full h-full overflow-hidden scale-0 group-hover:scale-100  rounded-[16px] top-1/2 left-1/2 z-10  group-hover:bg-black/50 bg-blend-soft-light  group-hover:backdrop-blur-[10px] transition-all duration-[0.5s] -translate-y-1/2 -translate-x-1/2">
+                        <div className="p-2">
+                          <p className="text-white text-sm font-normal tracking-wider">
+                            {res.description}
+                          </p>
                         </div>
                       </div>
-
-                      {/* <div className="text-white/80 font-medium text-sm">
-                        Database
-                      </div> */}
+                      <a
+                        className="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
+                        href="portfolio-single.html"
+                      >
+                        <img
+                          className="group-hover:scale-105 transition ease-custom duration-500"
+                          src={res.projectImg}
+                          alt=""
+                        />
+                      </a>
                     </div>
-                    {/* <ul className="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                      <li className="list-none inline-block leading-none pr-[4px]">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
+                    <div className="pt-6">
+                      <ul className="text-white font-outfit font-medium uppercase text-sm tracking-wider">
+                        {res.category.map((val, index) => {
+                          const classNames =
+                            index === 0
+                              ? "list-none inline-block leading-none pr-[4px]"
+                              : "list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80";
+                          return (
+                            <li key={index} className={classNames}>
+                              <a
+                                className="inline-block overflow-hidden"
+                                href="#"
+                              >
+                                <span
+                                  className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100 after:capitalize capitalize"
+                                  data-text={val}
+                                >
+                                  {val}
+                                </span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                      <div className="mt-2">
+                        <h2 className="relative font-outfit font-medium text-3xl">
+                          <a
+                            className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
+                            href="portfolio-single.html"
                           >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                    </ul> */}
-                    {/* <div className="mt-2">
-                      <h2 className="relative font-outfit font-medium text-3xl">
-                        <a
-                          className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                          href="portfolio-single.html"
-                        >
-                          <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                            <i className="bi bi-arrow-right"></i>
-                          </span>
-                          Fold Twist Abstract
-                        </a>
-                      </h2>
-                    </div> */}
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="group/portfolio-box group">
-                  <div className="overflow-hidden relative rounded-2xl ">
-                    <div className="absolute w-full h-full overflow-hidden scale-0 group-hover:scale-100  rounded-[16px] top-1/2 left-1/2 z-10  group-hover:bg-black/50 bg-blend-soft-light  group-hover:backdrop-blur-[10px] transition-all duration-[0.5s] -translate-y-1/2 -translate-x-1/2">
-                      <div className="p-2">
-                        <p className="text-white text-sm font-normal tracking-wider">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Ipsa consequuntur odio commodi molestias
-                          explicabo nemo nobis facere? Vero repellendus ad saepe
-                          vitae placeat quam, aliquid neque possimus, voluptas
-                          delectus qui, dolores architecto laudantium soluta
-                          hic? Nihil cupiditate voluptate repellat laudantium
-                          reiciendis sit voluptatem dolor fugiat alias aliquam?
-                          Quam, hic velit.
-                        </p>
+                            <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
+                              <i className="bi bi-arrow-right"></i>
+                            </span>
+                            {res.projectName}
+                          </a>
+                        </h2>
                       </div>
                     </div>
-                    <a
-                      className="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                      href="portfolio-single.html"
-                    >
-                      <img
-                        className="group-hover:scale-105 transition ease-custom duration-500"
-                        src={portfolio2}
-                        alt=""
-                      />
-                    </a>
                   </div>
-                  <div className="pt-6">
-                    <ul className="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                      <li className="list-none inline-block leading-none pr-[4px]">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100 after:capitalize capitalize"
-                            data-text="Javascript"
-                          >
-                            Javascript
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100 after:capitalize capitalize"
-                            data-text="React"
-                          >
-                            React
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100 after:capitalize capitalize"
-                            data-text="Laravel"
-                          >
-                            Laravel
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="mt-2">
-                      <h2 className="relative font-outfit font-medium text-3xl">
-                        <a
-                          className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                          href="portfolio-single.html"
-                        >
-                          <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                            <i className="bi bi-arrow-right"></i>
-                          </span>
-                          Invoice Time
-                        </a>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="group/portfolio-box">
-                  <div className="overflow-hidden relative rounded-2xl">
-                    <a
-                      className="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                      href="portfolio-single.html"
-                    >
-                      <img
-                        className="group-hover:scale-105 transition ease-custom duration-500"
-                        src={portfolio3}
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div className="pt-6">
-                    <ul className="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                      <li className="list-none inline-block leading-none pr-[4px]">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100 "
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="mt-2">
-                      <h2 className="relative font-outfit font-medium text-3xl">
-                        <a
-                          className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                          href="portfolio-single.html"
-                        >
-                          <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                            <i className="bi bi-arrow-right"></i>
-                          </span>
-                          Fold Twist Abstract
-                        </a>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="group/portfolio-box">
-                  <div className="overflow-hidden relative rounded-2xl">
-                    <a
-                      className="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                      href="portfolio-single.html"
-                    >
-                      <img
-                        className="group-hover:scale-105 transition ease-custom duration-500"
-                        src={portfolio4}
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div className="pt-6">
-                    <ul className="text-white font-outfit font-medium uppercase text-sm tracking-wider">
-                      <li className="list-none inline-block leading-none pr-[4px]">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                      <li className="list-none inline-block leading-none relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
-                        <a className="inline-block overflow-hidden" href="#">
-                          <span
-                            className="block relative text-transparent before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:opacity-100 before:text-white before:transition-all before:ease-out before:duration-200 hover:before:-top-full hover:before:opacity-0 after:content-[attr(data-text)] after:absolute after:top-full after:left-0 after:opacity-0 after:text-white after:transition-all after:ease-out after:duration-200 hover:after:top-0 hover:after:opacity-100"
-                            data-text="Category"
-                          >
-                            Category
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="mt-2">
-                      <h2 className="relative font-outfit font-medium text-3xl">
-                        <a
-                          className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                          href="portfolio-single.html"
-                        >
-                          <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
-                            <i className="bi bi-arrow-right"></i>
-                          </span>
-                          Visual Art of Cubes
-                        </a>
-                      </h2>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>
