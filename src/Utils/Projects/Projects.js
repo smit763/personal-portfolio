@@ -1,5 +1,7 @@
 import redbox from "../../assets/images/Projects/Redbox.png";
 import atelierware from "../../assets/images/Projects/Atelierware.png";
+import kutuma from "../../assets/images/Projects/kutuma.png";
+import WebMarket from "../../assets/images/Projects/WebMarket.png";
 
 export const AllProjects = [
   {
@@ -20,18 +22,18 @@ export const AllProjects = [
   },
   {
     id: 3,
-    projectName: "Redbox Global",
-    projectImg: redbox,
+    projectName: "Kutuma",
+    projectImg: kutuma,
     description:
-      "Developed a platform for real-time stock market updates, featuring live stock prices,AI-generated news, FII/DII ratio analysis, and F&O ban data. The app empowers investors withaccurate insights and a user-friendly interface for informed decision-making.",
-    category: ["ReactJs", "NodeJs", "MongoDB"],
+      "This parcel delivery platform connects senders with couriers through a bidding system. Users create orders with parcel details, and couriers place bids. Once a bid is accepted, the payment is securely held by the platform until delivery is verified. With built-in insurance, it ensures safe and reliable parcel delivery for both senders and couriers.",
+    category: ["ReactJs", "Socket.io", "NodeJs", "MySQL"],
   },
   {
     id: 4,
-    projectName: "Redbox Global",
-    projectImg: redbox,
+    projectName: "Web Market",
+    projectImg: WebMarket,
     description:
-      "Developed a platform for real-time stock market updates, featuring live stock prices,AI-generated news, FII/DII ratio analysis, and F&O ban data. The app empowers investors withaccurate insights and a user-friendly interface for informed decision-making.",
-    category: ["ReactJs", "NodeJs", "MongoDB"],
+      "This platform provides a diverse range of templates, including Shopify, eCommerce, React, WordPress, and PSD designs. Users can preview designs, view live demos, and access code for seamless integration. With membership options, users gain access to premium templates and exclusive tools, making it easier to build stunning websites and applications efficiently.",
+    category: ["ReactJs", "Redux", "ExpressJs", "MongoDB"],
   },
 ];

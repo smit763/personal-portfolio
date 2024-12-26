@@ -54,24 +54,22 @@ const Portfolio = () => {
               modules={[Navigation]}
               className="mySwiper portfolio-slider !overflow-visible mt-6 xl:mt-14"
             >
-              
-              {AllProjects.map((res, i) => (
-                <SwiperSlide key={i}>
+              {AllProjects.map((res) => (
+                <SwiperSlide key={res.id}>
                   <div className="group/portfolio-box group">
                     <div className="overflow-hidden relative rounded-2xl ">
-                      <div className="absolute w-full h-full overflow-hidden scale-0 group-hover:scale-100  rounded-[16px] top-1/2 left-1/2 z-10  group-hover:bg-black/50 bg-blend-soft-light  group-hover:backdrop-blur-[10px] transition-all duration-[0.5s] -translate-y-1/2 -translate-x-1/2">
+                    <div className="absolute w-full h-0 overflow-hidden opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full  rounded-[16px] bottom-0 left-1/2 z-10  group-hover:bg-black/50 bg-blend-soft-light  group-hover:backdrop-blur-[10px] transition-all duration-[0.5s]  -translate-x-1/2">
                         <div className="p-2">
                           <p className="text-white text-sm font-normal tracking-wider">
                             {res.description}
                           </p>
                         </div>
                       </div>
-                      <div
-                        className="group block relative"
-                      >
+                      <div className="group block relative">
                         <img
-                          className="group-hover:scale-105 transition ease-custom duration-500 object-cover"
+                          className="group-hover:scale-105 transition ease-custom duration-500 object-cover w-full"
                           src={res.projectImg}
+                          // src={portfolio1}
                           alt=""
                         />
                       </div>
@@ -117,6 +115,7 @@ const Portfolio = () => {
                   </div>
                 </SwiperSlide>
               ))}
+              
             </Swiper>
           </div>
         </div>
