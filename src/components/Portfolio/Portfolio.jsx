@@ -56,7 +56,7 @@ const Portfolio = () => {
             >
               
               {AllProjects.map((res, i) => (
-                <SwiperSlide key={res.id}>
+                <SwiperSlide key={i}>
                   <div className="group/portfolio-box group">
                     <div className="overflow-hidden relative rounded-2xl ">
                       <div className="absolute w-full h-full overflow-hidden scale-0 group-hover:scale-100  rounded-[16px] top-1/2 left-1/2 z-10  group-hover:bg-black/50 bg-blend-soft-light  group-hover:backdrop-blur-[10px] transition-all duration-[0.5s] -translate-y-1/2 -translate-x-1/2">
@@ -66,16 +66,15 @@ const Portfolio = () => {
                           </p>
                         </div>
                       </div>
-                      <a
-                        className="group block relative before:content-[''] before:z-[1] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100"
-                        href="portfolio-single.html"
+                      <div
+                        className="group block relative"
                       >
                         <img
-                          className="group-hover:scale-105 transition ease-custom duration-500"
+                          className="group-hover:scale-105 transition ease-custom duration-500 object-cover"
                           src={res.projectImg}
                           alt=""
                         />
-                      </a>
+                      </div>
                     </div>
                     <div className="pt-6">
                       <ul className="text-white font-outfit font-medium uppercase text-sm tracking-wider">
@@ -107,7 +106,7 @@ const Portfolio = () => {
                             className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
                             href="portfolio-single.html"
                           >
-                            <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition duration-100">
+                            <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition s[0.5s]">
                               <i className="bi bi-arrow-right"></i>
                             </span>
                             {res.projectName}

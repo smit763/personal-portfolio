@@ -7,10 +7,10 @@
   --cursor-size: 10px;
   --cursor-outline-size: 12px;
 }
-html *,
+/* html *,
 body * {
   cursor: none;
-}
+} */
 
 .stroke-text {
   --tw-text-opacity: 1;
@@ -62,7 +62,7 @@ body * {
 }
 
 
-
+/* 
 #cursor-dot,
 #cursor-dot-outline {
   z-index: 999;
@@ -86,4 +86,4 @@ body * {
   width: var(--cursor-outline-size);
   height: var(--cursor-outline-size);
   background: linear-gradient(45deg, #ff82f3 0%, #7b13ff 50%, #400d64 100%);
-}
+} */
