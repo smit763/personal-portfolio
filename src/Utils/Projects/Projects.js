@@ -3,6 +3,22 @@ import atelierware from "../../assets/images/Projects/Atelierware.png";
 import kutuma from "../../assets/images/Projects/kutuma.png";
 import WebMarket from "../../assets/images/Projects/WebMarket.png";
 
+import HTML from "../../assets/images/HTML.png";
+import CSS from "../../assets/images/CSS.png";
+import JS from "../../assets/images/JS.png";
+import React from "../../assets/images/React.png";
+import Redux from "../../assets/images/Redux.png";
+import Tailwind from "../../assets/images/Tailwind.png";
+import Mongodb from "../../assets/images/Mongodb.png";
+import Nodejs from "../../assets/images/Nodejs.png";
+import Sass from "../../assets/images/Sass.png";
+import SQL from "../../assets/images/SQL.png";
+import Express from "../../assets/images/Express.png";
+import Github from "../../assets/images/Github.png";
+import Docker from "../../assets/images/Docker.png";
+import AWS from "../../assets/images/AWS.png";
+import Firebase from "../../assets/images/Firebase.png";
+
 export const AllProjects = [
   {
     id: 1,
@@ -35,5 +51,83 @@ export const AllProjects = [
     description:
       "This platform provides a diverse range of templates, including Shopify, eCommerce, React, WordPress, and PSD designs. Users can preview designs, view live demos, and access code for seamless integration. With membership options, users gain access to premium templates and exclusive tools, making it easier to build stunning websites and applications efficiently.",
     category: ["ReactJs", "Redux", "ExpressJs", "MongoDB"],
+  },
+];
+
+export const AllTechnoLogies = [
+  {
+    id: 1,
+    icon: HTML,
+    name: "HTML",
+  },
+  {
+    id: 2,
+    icon: CSS,
+    name: "CSS",
+  },
+  {
+    id: 3,
+    icon: JS,
+    name: "JS",
+  },
+  {
+    id: 4,
+    icon: React,
+    name: "React",
+  },
+  {
+    id: 5,
+    icon: Redux,
+    name: "Redux",
+  },
+  {
+    id: 6,
+    icon: Tailwind,
+    name: "Tailwind",
+  },
+  {
+    id: 7,
+    icon: Mongodb,
+    name: "Mongodb",
+  },
+  {
+    id: 8,
+    icon: Nodejs,
+    name: "Nodejs",
+  },
+  {
+    id: 9,
+    icon: Sass,
+    name: "Sass",
+  },
+  {
+    id: 10,
+    icon: SQL,
+    name: "SQL",
+  },
+  {
+    id: 11,
+    icon: Express,
+    name: "Express",
+  },
+  {
+    id: 12,
+    icon: Github,
+    name: "Github",
+  },
+  {
+    id: 13,
+    icon: Docker,
+    name: "Docker",
+  },
+  {
+    id: 14,
+    icon: AWS,
+    name: "AWS",
+  },
+  {
+    id: 15,
+    icon: Firebase,
+    name: "Firebase",
   },
 ];
