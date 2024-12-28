@@ -18,6 +18,11 @@ import Github from "../../assets/images/Github.png";
 import Docker from "../../assets/images/Docker.png";
 import AWS from "../../assets/images/AWS.png";
 import Firebase from "../../assets/images/Firebase.png";
+import Electron from "../../assets/images/Electron.png";
+
+import client1 from "../../assets/images/testimonial-1.png";
+import client2 from "../../assets/images/testimonial-2.png";
+import client3 from "../../assets/images/testimonial-3.jpg";
 
 export const AllProjects = [
   {
@@ -129,5 +134,37 @@ export const AllTechnoLogies = [
     id: 15,
     icon: Firebase,
     name: "Firebase",
+  },
+  {
+    id: 16,
+    icon: Electron,
+    name: "Electron",
+  },
+];
+
+export const clientReviews = [
+  {
+    id: 1,
+    name: "Marcella Leonard",
+    review:
+      "Amazing attention to detail and creativity! They crafted a visually stunning, user-friendly interface that perfectly matches the brand's identity. Their design work enhances the overall user experience beautifully.",
+    role: "Creative Director",
+    image: client1,
+  },
+  {
+    id: 2,
+    name: "Bradley Mendez",
+    review:
+      "Highly skilled in backend development, they delivered a robust, efficient system with seamless functionality. Their expertise ensures everything runs smoothly and scales effortlessly to meet future needs.",
+    role: "CTO - FlaTheme",
+    image: client2,
+  },
+  {
+    id: 3,
+    name: "Linda Adams",
+    review:
+      "An exceptional web developer with unmatched professionalism and technical prowess. From design to backend, they delivered a top-notch website that exceeded expectations and works flawlessly.",
+    role: "Project Manager",
+    image: client3,
   },
 ];

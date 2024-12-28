@@ -60,9 +60,9 @@ const Portfolio = () => {
                     <div className="overflow-hidden relative rounded-2xl ">
                     <div className="absolute w-full h-0 overflow-hidden opacity-0 group-hover:opacity-100 group-hover:w-full group-hover:h-full  rounded-[16px] bottom-0 left-1/2 z-10  group-hover:bg-black/50 bg-blend-soft-light  group-hover:backdrop-blur-[10px] transition-all duration-[0.5s]  -translate-x-1/2">
                         <div className="p-2">
-                          <p className="text-white text-sm font-normal tracking-wider">
+                          <p className="text-white sm:text-sm text-[12px] font-normal tracking-wider">
                             {res.description}
-                          </p>
+                          </p> 
                         </div>
                       </div>
                       <div className="group block relative">

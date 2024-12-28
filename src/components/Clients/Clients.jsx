@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { AllTechnoLogies } from "../../Utils/Projects/Projects";
+import { Autoplay } from "swiper/modules";
 
 const Clients = () => {
   return (
@@ -8,11 +9,20 @@ const Clients = () => {
       <Swiper
         slidesPerView={2}
         spaceBetween={24}
+        loop={true}
+        grabCursor={true}
+        speed={6000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: true,
+        }}
+        
         breakpoints={{
           640: { slidesPerView: 3, spaceBetween: 24 },
           768: { slidesPerView: 4, spaceBetween: 30 },
           1024: { slidesPerView: 5, spaceBetween: 50 },
         }}
+        modules={[Autoplay]}
         className="swiper !pb-24 xl:!pb-28"
       >
         <div className="swiper-wrapper">
