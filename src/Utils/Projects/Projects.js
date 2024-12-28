@@ -2,6 +2,10 @@ import redbox from "../../assets/images/Projects/Redbox.png";
 import atelierware from "../../assets/images/Projects/Atelierware.png";
 import kutuma from "../../assets/images/Projects/kutuma.png";
 import WebMarket from "../../assets/images/Projects/WebMarket.png";
+import Parking from "../../assets/images/Projects/Parking.png";
+import RederralX from "../../assets/images/Projects/RederralX.png";
+import Errands from "../../assets/images/Projects/Errands.png";
+import InvoiceTime from "../../assets/images/Projects/InvoiceTime.png";
 
 import HTML from "../../assets/images/HTML.png";
 import CSS from "../../assets/images/CSS.png";
@@ -22,7 +26,7 @@ import Electron from "../../assets/images/Electron.png";
 
 import client1 from "../../assets/images/testimonial-1.png";
 import client2 from "../../assets/images/testimonial-2.png";
-import client3 from "../../assets/images/testimonial-3.jpg";
+import client3 from "../../assets/images/testimonial-3.png";
 
 export const AllProjects = [
   {
@@ -56,6 +60,38 @@ export const AllProjects = [
     description:
       "This platform provides a diverse range of templates, including Shopify, eCommerce, React, WordPress, and PSD designs. Users can preview designs, view live demos, and access code for seamless integration. With membership options, users gain access to premium templates and exclusive tools, making it easier to build stunning websites and applications efficiently.",
     category: ["ReactJs", "Redux", "ExpressJs", "MongoDB"],
+  },
+  {
+    id: 5,
+    projectName: "ParkVission",
+    projectImg: Parking,
+    description:
+      "This parking management system utilizes OpenCV and ANPR technologies to automate vehicle entry and exit logging. It scans number plates, associates them with registered owner IDs, and prints entry details automatically. Designed for apartments with multiple buildings, the system ensures seamless tracking and efficient parking operations without manual intervention",
+    category: ["Python", "React", "Flutter"],
+  },
+  {
+    id: 6,
+    projectName: "RederralX",
+    projectImg: RederralX,
+    description:
+      "This platform lets users buy and sell coupons for various services. Buyers can find great deals, and sellers can list unused coupons. A secure chat connects the admin, buyer, and seller for smooth collaboration. Payments are held by the admin until the coupon is claimed, ensuring a safe and reliable process. With multiple categories, it's the perfect solution for managing coupons effortlessly.",
+    category: ["ReactJs", "Socket.io", "Redux", "NodeJs", "MongoDB"],
+  },
+  {
+    id: 7,
+    projectName: "Errands",
+    projectImg: Errands,
+    description:
+      "Errands Inc. is a 24/7 on-demand app connecting users with independent contractors to handle personal or business errands. It’s a smarter, safer, and efficient way to get help instantly or on schedule, empowering people to save time and focus on what matters.",
+    category: ["ReactJs", "ExpressJs", "MongoDB", "Flutter"],
+  },
+  {
+    id: 8,
+    projectName: "InvoiceTime",
+    projectImg: InvoiceTime,
+    description:
+      "Developed a custom integration for Zoho's cloud suite, connecting Zoho CRM, Zoho Books, and Zoho Projects. This solution streamlined business processes, improved customer management, and enhanced efficiency, providing real-time insights for better decision-making.",
+    category: ["ReactJs", "ExpressJs", "Laravel"],
   },
 ];
 
@@ -145,26 +181,26 @@ export const AllTechnoLogies = [
 export const clientReviews = [
   {
     id: 1,
-    name: "Marcella Leonard",
+    name: "Henry",
+    role: "COO",
     review:
       "Amazing attention to detail and creativity! They crafted a visually stunning, user-friendly interface that perfectly matches the brand's identity. Their design work enhances the overall user experience beautifully.",
-    role: "Creative Director",
     image: client1,
   },
   {
     id: 2,
-    name: "Bradley Mendez",
+    name: "Fatima",
+    role: "Manager",
     review:
       "Highly skilled in backend development, they delivered a robust, efficient system with seamless functionality. Their expertise ensures everything runs smoothly and scales effortlessly to meet future needs.",
-    role: "CTO - FlaTheme",
     image: client2,
   },
   {
     id: 3,
-    name: "Linda Adams",
+    name: "Manan Desai",
+    role: "Yummy Burp's owner",
     review:
       "An exceptional web developer with unmatched professionalism and technical prowess. From design to backend, they delivered a top-notch website that exceeded expectations and works flawlessly.",
-    role: "Project Manager",
     image: client3,
   },
 ];
