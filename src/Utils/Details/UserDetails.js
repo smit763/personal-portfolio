@@ -1,5 +1,5 @@
 import heroImage from "../../assets/images/hero-avatar.jpg";
-import Resume from "../../assets/images/Docs/AshishGohilCV.pdf";
+import Resume from "../../assets/images/Docs/SmitRakholiya.pdf";
 
 export const usetDetails = {
   userName: "Smit Rakholiya",
