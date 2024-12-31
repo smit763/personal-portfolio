@@ -3,7 +3,7 @@ import atelierware from "../../assets/images/Projects/Atelierware.png";
 import kutuma from "../../assets/images/Projects/kutuma.png";
 import WebMarket from "../../assets/images/Projects/WebMarket.png";
 import Parking from "../../assets/images/Projects/Parking.png";
-import RederralX from "../../assets/images/Projects/RederralX.png";
+import ReferralX from "../../assets/images/Projects/RederralX.png";
 import Errands from "../../assets/images/Projects/Errands.png";
 import InvoiceTime from "../../assets/images/Projects/InvoiceTime.png";
 
@@ -71,8 +71,8 @@ export const AllProjects = [
   },
   {
     id: 6,
-    projectName: "RederralX",
-    projectImg: RederralX,
+    projectName: "ReferralX",
+    projectImg: ReferralX,
     description:
       "This platform lets users buy and sell coupons for various services. Buyers can find great deals, and sellers can list unused coupons. A secure chat connects the admin, buyer, and seller for smooth collaboration. Payments are held by the admin until the coupon is claimed, ensuring a safe and reliable process. With multiple categories, it's the perfect solution for managing coupons effortlessly.",
     category: ["ReactJs", "Socket.io", "Redux", "NodeJs", "MongoDB"],
