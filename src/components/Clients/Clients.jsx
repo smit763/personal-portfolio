@@ -23,7 +23,7 @@ const Clients = () => {
           1024: { slidesPerView: 5, spaceBetween: 50 },
         }}
         modules={[Autoplay]}
-        className="swiper !pb-24 xl:!pb-28"
+        className="swiper  !pb-10 lg:!pb-24 xl:!pb-28"
       >
         <div className="swiper-wrapper">
           {AllTechnoLogies.map((res) => (

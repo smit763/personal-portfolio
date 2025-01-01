@@ -1,11 +1,16 @@
-import React from "react";
+
+import { motion } from "framer-motion";
 
 const Services = () => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 }, // Initial state
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }, // Animated state
+  };
   return (
     <>
       <div
         id="services"
-        className="w-full lg:flex py-24 xl:py-28 space-y-6 lg:space-y-0"
+        className="w-full lg:flex py-10 lg:py-24 xl:py-28 space-y-6 lg:space-y-0"
       >
         <div className="w-full lg:w-1/3">
           <h6 className="pl-[20px] relative font-outfit font-medium text-sm uppercase tracking-wider text-white/40 before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[12px] before:h-[12px] before:rounded-full before:border-2 before:border-white/30">
@@ -19,7 +24,13 @@ const Services = () => {
           </h2>
         </div>
         <div className="w-full lg:w-2/3 space-y-6">
-          <div className="z-[1] p-8 space-y-3 md:space-y-0 md:flex md:items-center bg-darkBg rounded-lg relative overflow-hidden before:content-[''] before:absolute before:-z-[1] before:left-0 before:top-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-themeGradient">
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="z-[1] p-8 space-y-3 md:space-y-0 md:flex md:items-center bg-darkBg rounded-lg relative overflow-hidden before:content-[''] before:absolute before:-z-[1] before:left-0 before:top-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-themeGradient"
+          >
             <div className="md:w-[15%] text-white">
               <span className="font-outfit text-2xl xl:text-3xl font-medium">
                 01/
@@ -38,8 +49,14 @@ const Services = () => {
                 with a focus on clean code and seamless user experiences.
               </p>
             </div>
-          </div>
-          <div className="z-[1] p-8 space-y-3 md:space-y-0 md:flex md:items-center bg-darkBg rounded-lg relative overflow-hidden before:content-[''] before:absolute before:-z-[1] before:left-0 before:top-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-themeGradient">
+          </motion.div>
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="z-[1] p-8 space-y-3 md:space-y-0 md:flex md:items-center bg-darkBg rounded-lg relative overflow-hidden before:content-[''] before:absolute before:-z-[1] before:left-0 before:top-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-themeGradient"
+          >
             <div className="md:w-[15%] text-white">
               <span className="font-outfit text-2xl xl:text-3xl font-medium">
                 02/
@@ -58,8 +75,14 @@ const Services = () => {
                 performance, secure APIs, and seamless data handling.
               </p>
             </div>
-          </div>
-          <div className="z-[1] p-8 space-y-3 md:space-y-0 md:flex md:items-center bg-darkBg rounded-lg relative overflow-hidden before:content-[''] before:absolute before:-z-[1] before:left-0 before:top-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-themeGradient">
+          </motion.div>
+          <motion.div
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="z-[1] p-8 space-y-3 md:space-y-0 md:flex md:items-center bg-darkBg rounded-lg relative overflow-hidden before:content-[''] before:absolute before:-z-[1] before:left-0 before:top-0 before:w-full before:h-full before:bg-themeGradient before:opacity-0 hover:before:opacity-10 before:transition-all before:ease-linear before:duration-100 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-themeGradient"
+          >
             <div className="md:w-[15%] text-white">
               <span className="font-outfit text-2xl xl:text-3xl font-medium">
                 03/
@@ -78,7 +101,7 @@ const Services = () => {
                 deployments for scalable applications
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

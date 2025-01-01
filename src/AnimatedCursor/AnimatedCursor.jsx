@@ -153,8 +153,8 @@ export default function AnimatedCursor({
 
   return (
     <>
-      <div ref={cursorOuterRef} style={styles.cursorOuter}></div>
-      <div ref={cursorInnerRef} style={styles.cursorInner}></div>
+      <div ref={cursorOuterRef} style={styles.cursorOuter} className="hidden lg:block"></div>
+      <div ref={cursorInnerRef} style={styles.cursorInner} className="hidden lg:block"></div>
     </>
   );
 }
