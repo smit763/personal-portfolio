@@ -1,8 +1,12 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
   const {
     register,
     handleSubmit,
@@ -37,7 +41,11 @@ const Contact = () => {
   };
 
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={fadeIn}
       id="contact"
       className="container bg-darkBg max-w-[1320px] rounded-2xl mx-auto px-5 md:px-10 xl:px-5 py-16"
     >
@@ -47,7 +55,7 @@ const Contact = () => {
             Contact
           </h6>
           <h2 className="font-outfit font-medium text-4xl md:text-5xl lg:text-6xl text-white mt-2">
-            Let's
+            {" Let's"}
             <span className="bg-themeGradient bg-clip-text text-transparent">
               Talk
             </span>
@@ -151,7 +159,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

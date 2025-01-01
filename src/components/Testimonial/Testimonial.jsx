@@ -1,12 +1,20 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import { clientReviews } from "../../Utils/Projects/Projects";
+import { motion } from "framer-motion";
 
 const Testimonial = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
   return (
     <>
-      <div
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
         id="testimonial"
         className="container max-w-[1320px] mx-auto px-5 md:px-10 xl:px-5 py-24 xl:py-28"
       >
@@ -41,7 +49,7 @@ const Testimonial = () => {
                         {res.role}
                       </span>
                     </div>
-                    <p className="text-xl xl:text-2xl italic text-white/70 leading-normal">
+                    <p className="text-xl xl:text-2xl italic text-white/70 leading-normal mb-8 lg:mb-0 ">
                       {res.review}
                     </p>
                   </div>
@@ -54,7 +62,7 @@ const Testimonial = () => {
           </div>
           <div className="swiper-testimonial-pagination"></div>
         </Swiper>
-      </div>
+      </motion.div>
     </>
   );
 };

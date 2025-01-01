@@ -1,22 +1,37 @@
-import React from "react";
-import heroImage from "../../assets/images/hero-avatar.jpg";
 import { TbBrandFiverr } from "react-icons/tb";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { IoCall } from "react-icons/io5";
 import { usetDetails } from "../../Utils/Details/UserDetails";
+import Counters from "./Counters";
+import { motion } from "framer-motion";
 
 const Aboute = () => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 }, // Initial state
+    visible: { opacity: 1, y: 0 }, // Final state
+  };
   return (
     <>
-      <div className="lg:flex space-y-8 lg:space-y-0">
-        <div className="w-full lg:w-1/3 lg:order-2 text-center">
+      <motion.div 
+        className="lg:flex space-y-8 lg:space-y-0"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }} // Triggers only once when 20% of the component is in view
+        transition={{ duration: 0.6, ease: "easeOut" }} // Animation duration and easing
+        variants={containerVariants}
+      >
+        <motion.div
+          variants={containerVariants}
+          transition={{ delay: 0.4 }}
+          className="w-full lg:w-1/3 lg:order-2 text-center"
+        >
           <img
             className="inline-block w-[240px] h-[240px] md:w-[270px] md:h-[270px] xl:w-[320px] xl:h-[320px] rounded-full"
             src={usetDetails.image}
             alt=""
           />
-        </div>
+        </motion.div>
         <div className="w-full lg:w-1/3 lg:order-1 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-1 gap-6 lg:gap-8">
           <div>
             <h6 className="font-sansSerif font-medium tracking-wider uppercase text-sm text-white mb-2">
@@ -33,16 +48,16 @@ const Aboute = () => {
               Skills
             </h6>
             <ul className="text-white/70">
-              <li className="list-none inline-block pr-[4px]">
+              <li className="list-none block  md:inline-block relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
                 Web Development
               </li>
-              <li className="list-none inline-block relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+              <li className="list-none block  md:inline-block relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
                 DevOps
               </li>
-              <li className="list-none inline-block relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+              <li className="list-none block  md:inline-block relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
                 Project Management
               </li>
-              <li className="list-none inline-block relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
+              <li className="list-none block  md:inline-block relative pl-[14px] pr-[4px] before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-[5px] before:h-[5px] before:rounded-md before:bg-white/80">
                 Version Control
               </li>
             </ul>
@@ -103,33 +118,8 @@ const Aboute = () => {
             </ul>
           </div>
         </div>
-        <div className="w-full lg:w-1/3 order-3 grid grid-cols-3 lg:grid-cols-1 gap-6 lg:gap-7 lg:text-right">
-          <div>
-            <h6 className="font-sansSerif font-medium tracking-wider uppercase text-sm text-white mb-2">
-              Projects Done
-            </h6>
-            <span className="text-4xl lg:text-5xl xl:text-6xl font-sansSerif font-light text-white">
-              132
-            </span>
-          </div>
-          <div>
-            <h6 className="font-sansSerif font-medium tracking-wider uppercase text-sm text-white mb-2">
-              Years of Experience
-            </h6>
-            <span className="text-4xl lg:text-5xl xl:text-6xl font-sansSerif font-light text-white">
-              2.5+
-            </span>
-          </div>
-          <div>
-            <h6 className="font-sansSerif font-medium tracking-wider uppercase text-sm text-white mb-2">
-              Worldwide Clients
-            </h6>
-            <span className="text-4xl lg:text-5xl xl:text-6xl font-sansSerif font-light text-white">
-              17+
-            </span>
-          </div>
-        </div>
-      </div>
+        <Counters containerVariants={containerVariants} />
+      </motion.div>
     </>
   );
 };

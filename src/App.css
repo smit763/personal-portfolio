@@ -26,12 +26,27 @@ body * {
   border-radius: 10px;
 }
 
-.stroke-text {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1.4px;
-  -webkit-text-stroke-color: white;
+@media(max-width : 767px) {
+  .stroke-text {
+    --tw-text-opacity: 1;
+    color: transparent; /* Make the base text color transparent */
+    background: white; /* Gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.4px;
+    /* -webkit-text-stroke-color: #ff82f3; Fallback stroke color */
+  }
+  
+}
+@media (min-width: 768px) {
+  .stroke-text {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.4px;
+    -webkit-text-stroke-color: white;
+  }
 }
 
 .swiper-testimonial-pagination.swiper-pagination-progressbar,
