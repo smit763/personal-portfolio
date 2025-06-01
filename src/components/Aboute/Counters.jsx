@@ -21,7 +21,7 @@ const Counters = ({containerVariants}) => {
           Years of Experience
         </h6>
         <span className="text-4xl lg:text-5xl xl:text-6xl font-sansSerif font-light text-white">
-          <CountUp start={0} end={2.5} duration={3} decimals={1} />
+          <CountUp start={0} end={3} duration={3} />
         </span>
       </div>
       <div>

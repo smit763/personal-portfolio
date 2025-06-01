@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { usetDetails } from "../../Utils/Details/UserDetails";
 
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 

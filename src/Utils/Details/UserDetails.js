@@ -1,4 +1,4 @@
-import heroImage from "../../assets/images/hero-avatar.jpg";
+import heroImage from "../../assets/images/hero-avatar.png";
 import Resume from "../../assets/images/Docs/SmitRakholiya.pdf";
 
 export const usetDetails = {

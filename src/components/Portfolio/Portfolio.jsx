@@ -1,4 +1,3 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
@@ -133,15 +132,12 @@ const Portfolio = () => {
                           viewport={{ once: true }}
                         >
                           <h2 className="relative font-outfit font-medium text-3xl">
-                            <a
-                              className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200"
-                              href="portfolio-single.html"
-                            >
+                            <span className="text-white group-hover/portfolio-box:pl-[44px] transition-all ease-out duration-200">
                               <span className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 opacity-0 group-hover/portfolio-box:opacity-100 group-hover/portfolio-box:-translate-x-0 transition s[0.5s]">
                                 <i className="bi bi-arrow-right"></i>
                               </span>
                               {res.projectName}
-                            </a>
+                            </span>
                           </h2>
                         </motion.div>
                       </div>
